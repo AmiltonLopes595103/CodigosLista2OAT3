@@ -1,126 +1,211 @@
 ﻿
-using SegundaLista.cs;
 
-namespace Lista2
+
+using SegundaListaPart2.cs;
+
+class Program
 {
-    class Principal
+    public static void Main(string[] args)
     {
-        static void Main(String[] args)
 
+        int opcao;
+
+        do
         {
-            int opcao;
-            do
+
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("|(11) TROCA DE VALORES               |");
+            Console.WriteLine("|(12) Modulo de um numero            |");
+            Console.WriteLine("|(13) Numeros em decrescente         |");
+            Console.WriteLine("|(15) AlunoAprovadoReprovado         |");
+            Console.WriteLine("|(16) Maior menor ou igual           |");
+            Console.WriteLine("|(17) DentroOuForadoLimite           |");
+            Console.WriteLine("|(18) Codigo valido ou inValido      |");
+            Console.WriteLine("|(19) Calculo dos lados dotriangulo  |");
+            Console.WriteLine("|(20) Numero valido ou invalido      |");
+            Console.WriteLine("|(21) Verificar numero               |");
+            Console.WriteLine("|(22) Positivo ou negativo           |");
+            Console.WriteLine("|(23) Quatro operacoes               |");
+            Console.WriteLine("|(24) Calculo multiplo  par e média  |");
+            Console.WriteLine("|(25) Peso ideal                     |");
+            Console.WriteLine("|(26) Numeros em ordem decresc       |");
+            Console.WriteLine("|(27) Fatorial do numero             |");
+            Console.WriteLine("|(28) Números impares entre 100 e 200|");
+            Console.WriteLine("|(29) Numeros de 1 ate 200           |");
+            Console.WriteLine("|(30) Tabuada                        |");
+            Console.WriteLine("|(32) Soma  dos quadrados            |");
+            Console.WriteLine("|(33) Media notas                    |");
+            Console.WriteLine("|(34) Maior e menor valor            |");
+            Console.WriteLine("|(0) Sair!                           |");
+            Console.WriteLine("=====================================");
+            Console.Write("ESCOLHA UMA OPÇÃO: ");
+            opcao = int.Parse(Console.ReadLine());
+
+            switch (opcao)
             {
-                Console.WriteLine();
-                Console.WriteLine("==========================================================");
-                Console.WriteLine("|(1)Calculo do estoque médio                              |");
-                Console.WriteLine("|(2)Converter Dollar para Real                            |");
-                Console.WriteLine("|(3)Comição de vendas                                     |");
-                Console.WriteLine("|(4)Calculo dos valores                                   |");
-                Console.WriteLine("|(5)Quantidade de combustivel gasto na viagem             |");
-                Console.WriteLine("|(7)Conveter de fahrenheit para celsius                   |");
-                Console.WriteLine("|(8)Calculo do volume de uma lata de óleo                 |");
-                Console.WriteLine("|(9)Calculo da iadae de um pessoa em dias                 |");
-                Console.WriteLine("|(10)Relacionamentos possiveis entre dois numeros inteiros|");
-                Console.WriteLine("|(0)SAIR                                                  |");
-                Console.WriteLine("==========================================================");
-                Console.Write("Escolha uma opção: ");
-                opcao = int.Parse(Console.ReadLine());
+                case 11:
+                    ExerciciosP2 objexercicio11 = new ExerciciosP2();
+                    objexercicio11.TrocadeValores();
+                    break;
 
-                switch (opcao)
-                {
+                case 12:
 
+                    ExerciciosP2 objexercicio12 = new ExerciciosP2();
+                    objexercicio12.ModuloNumero();
 
-                    case 1:
-                        Exercicios objexercicio1 = new Exercicios();//Instanciando um objeto da classe Exercicios.
+                    break;
 
-                        objexercicio1.EstoqueMedio();/*Chamendo um método que pertence a Classe Exercicios()
-                                                 atraves da intancia dessa classe*/
+                case 13:
+                    ExerciciosP2 objexercicio13 = new ExerciciosP2();
+                    objexercicio13.NumerosOrdemDecrescente();
 
-                        break;
+                    break;
+                case 14:
+                    ExerciciosP2 objexercicio14 = new ExerciciosP2();
+                    objexercicio14.MaioreMenorNumero();
 
-                    case 2:
+                    break;
 
-
-                        Exercicios objexercicios2 = new Exercicios();
-
-                        objexercicios2.ConverterDollarReal();
+                case 15:
+                    ExerciciosP2 objexercicio15 = new ExerciciosP2();
+                    objexercicio15.AlunoAprovadoReprovado();
 
 
 
+                    break;
 
-                        break;
+                case 16:
+                    ExerciciosP2 objexercicio16 = new ExerciciosP2();
+                    objexercicio16.MaiorMenorouIgual();
+                    break;
 
-                    case 3:
+                case 17:
 
-                        Exercicios objexercicio3 = new Exercicios();
-                        objexercicio3.CalculoComissão();
-                        break;
+                    ExerciciosP2 objexercicio17 = new ExerciciosP2();
+                    objexercicio17.DentroOuForadoLimite();
 
-
-                    case 4:
-                        Exercicios objexercicio4 = new Exercicios();
-                        objexercicio4.CalculoNumeros();
-                        break;
-
-                    case 5:
-
-                        Exercicios objexercicio5 = new Exercicios();
-                        objexercicio5.CalculoCombustivel();
-                        break;
-
-                    case 6:
-                        Exercicios objexercicio6 = new Exercicios();
-                        objexercicio6.ConverterCelsiusFahrenheit();
-
-                        break;
-
-                    case 7:
-                        Exercicios objexercicio7 = new Exercicios();
-                        objexercicio7.CoverterFahrenheitCelsius();
-                        break;
-
-                    case 8:
-                        Exercicios objexercicio8 = new Exercicios();
-                        objexercicio8.VolumeLataOleo();
+                    break;
+                case 18:
+                    ExerciciosP2 objexercicio18 = new ExerciciosP2();
+                    objexercicio18.CodigoValidoInValido();
 
 
-                        break;
-                    case 9:
-                        Exercicios objexercio9 = new Exercicios();
-                        objexercio9.AnosMesesDias();
-
-                        break;
-
-                    case 10:
-
-                        Exercicios objexercicio10 = new Exercicios();
-                        objexercicio10.ComparandoNumeros();
-                        break;
-                    case 0:
-                        Console.WriteLine("SAIR!");
-                        break;
-
-                    default:
-
-                        Console.WriteLine("OPÇÃO INVALIDA!");
-
-                        break;
+                    break;
+                case 19:
+                    ExerciciosP2 objexercicio19 = new ExerciciosP2();
+                    objexercicio19.LadosDoTriangulo();
 
 
 
+                    break;
+
+                case 20:
+
+                    ExerciciosP2 objexercicio20 = new ExerciciosP2();
+                    objexercicio20.numeroValidoOuInvalido();
+
+
+                    break;
+
+                case 21:
+
+                    ExerciciosP2 objexercicio21 = new ExerciciosP2();
+                    objexercicio21.VerificarNumero();
+                    break;
+
+                case 22:
+
+                    ExerciciosP2 objexercicio22 = new ExerciciosP2();
+                    objexercicio22.PositivoNegativo();
+                    break;
+
+                case 23:
+
+                    ExerciciosP2 objexercicio23 = new ExerciciosP2();
+                    objexercicio23.QuatroOperacoes();
+                    break;
+                case 24:
+
+                    ExerciciosP2 objexercicio24 = new ExerciciosP2();
+                    objexercicio24.CalculoMultiploParMedia();
+                    break;
+                case 25:
+
+                    ExerciciosP2 objexercicio25 = new ExerciciosP2();
+                    objexercicio25.PesoIdeal();
+                    break;
+                case 26:
+
+                    ExerciciosP2 objexercicio26 = new ExerciciosP2();
+                    objexercicio26.ExibindoNumerosOrdemDecresc();
+                    break;
+                case 27:
+                    ExerciciosP2 objexercicio27 = new ExerciciosP2();
+                    objexercicio27.FatorialDoNumero();
+
+
+                    break;
+                case 28:
+
+                    ExerciciosP2 objexercicio28 = new ExerciciosP2();
+                    objexercicio28.ImparesEntre100e200();
+                    break;
+
+                case 29:
+
+                    ExerciciosP2 objexercicio29 = new ExerciciosP2();
+                    objexercicio29.Numeros1ate200();
+                    break;
+                case 30:
+
+                    ExerciciosP2 objexercicio30 = new ExerciciosP2();
+                    objexercicio30.Tabuada();
+                    break;
+                case 31:
+
+                    ExerciciosP2 objexercicio31 = new ExerciciosP2();
+                    objexercicio31.ParesImpares();
+                    break;
+                case 32:
+
+                    ExerciciosP2 objexercicio32 = new ExerciciosP2();
+                    objexercicio32.SomaDosQuadrados();
+                    break;
+                case 33:
+
+                    ExerciciosP2 objexercicio33 = new ExerciciosP2();
+                    objexercicio33.MediaNotas();
+                    break;
+
+
+
+                case 34:
+
+                    ExerciciosP2 objexercicio34 = new ExerciciosP2();
+                    objexercicio34.MaiorMenorValor();
+                    break;
+                case 0:
+                    Console.WriteLine("Sair!");
+                    break;
+
+                default:
+                    Console.WriteLine("Opção Invalida!");
+
+                    break;
 
 
 
 
 
-                }
 
 
 
-            } while (opcao!=0);
 
-            
-        }
+
+
+            }
+
+        } while (opcao!=0);
     }
 }
