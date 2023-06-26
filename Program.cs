@@ -1,225 +1,200 @@
 ﻿
 
 
-using System.Security.Cryptography.X509Certificates;
-using SegundaListaP3.cs;
+using SegundaListaPart2.cs;
 
-class Principal
+class Program
 {
-
     public static void Main(string[] args)
     {
+
         int opcao;
 
         do
         {
 
 
-
-            
-
-            Console.WriteLine("=========================================");
-            Console.WriteLine("|35 - Multiplosde 10 em 100               |");
-            Console.WriteLine("|36 - Maior Menor Valor e Positivo        |");
-            Console.WriteLine("|37 _ Quatro Operações                    |");
-            Console.WriteLine("|38 - CalculoSalario                      |");
-            Console.WriteLine("|39 -  Par impar positivo e negativo      |");
-            Console.WriteLine("|40 - Indice Poluição                     |");
-            Console.WriteLine("|41 - Classificação Categorica            |");
-            Console.WriteLine("|42 - Maior Menor De Nnumeros             |");
-            Console.WriteLine("|43 - NumeroDeGraosPagamento              |");
-            Console.WriteLine("|44 - Escolher entre 4 Opções             |");
-            Console.WriteLine("|45 - Numeros Na Orde Inversa             |");
-            Console.WriteLine("|46 - Produto Escalar Vetores             |");
-            Console.WriteLine("|47 - Numeros Maiores Menores e Iguais a X|");
-            Console.WriteLine("|48 - Encontrar Modelo                    |");
-            Console.WriteLine("|49 - Valores Iguais Na Mesma Posicao     |");
-            Console.WriteLine("|50 - Adivinhe  o Numero                  |");
-            Console.WriteLine("|51 - Notas Acima De da media             |");
-            Console.WriteLine("|52 - Vezes Que Numero Aparece            |");
-            Console.WriteLine("|53 - Corrida Automoveis                  |");
-            Console.WriteLine("|54 - Elementos Comuns nos Vetores        |");
-            Console.WriteLine("|55 - Retirar  Espacos em Branco          |");
-            Console.WriteLine("|56 - Numeros Pares Emultiplos De 5       |");
-            Console.WriteLine("|57 - Imprimir Somente as Vogais          |");
-            Console.WriteLine("|58 - Elementos Comuns nos Vetores        |");
-            Console.WriteLine("|59 - Contar Caracteres                   |");
-            Console.WriteLine("|61-  Calculo   Reajuste                  |");
-            Console.WriteLine("|62 - Calculo  Hipotenusa                 |");
-            Console.WriteLine("|63 - Verificar se é Parou Impar          |");
-            Console.WriteLine("|0 - Sair                                 |");
-            Console.WriteLine("=========================================");
-            Console.Write("Escolha uma opção: ");
+            Console.WriteLine("=====================================");
+            Console.WriteLine("|(11) TROCA DE VALORES               |");
+            Console.WriteLine("|(12) Modulo de um numero            |");
+            Console.WriteLine("|(13) Numeros em decrescente         |");
+            Console.WriteLine("|(15) AlunoAprovadoReprovado         |");
+            Console.WriteLine("|(16) Maior menor ou igual           |");
+            Console.WriteLine("|(17) DentroOuForadoLimite           |");
+            Console.WriteLine("|(18) Codigo valido ou inValido      |");
+            Console.WriteLine("|(19) Calculo dos lados dotriangulo  |");
+            Console.WriteLine("|(20) Numero valido ou invalido      |");
+            Console.WriteLine("|(21) Verificar numero               |");
+            Console.WriteLine("|(22) Positivo ou negativo           |");
+            Console.WriteLine("|(23) Quatro operacoes               |");
+            Console.WriteLine("|(24) Calculo multiplo  par e média  |");
+            Console.WriteLine("|(25) Peso ideal                     |");
+            Console.WriteLine("|(26) Numeros em ordem decresc       |");
+            Console.WriteLine("|(27) Fatorial do numero             |");
+            Console.WriteLine("|(28) Números impares entre 100 e 200|");
+            Console.WriteLine("|(29) Numeros de 1 ate 200           |");
+            Console.WriteLine("|(30) Tabuada                        |");
+            Console.WriteLine("|(32) Soma  dos quadrados            |");
+            Console.WriteLine("|(33) Media notas                    |");
+            Console.WriteLine("|(34) Maior e menor valor            |");
+            Console.WriteLine("|(0) Sair!                           |");
+            Console.WriteLine("=====================================");
+            Console.Write("ESCOLHA UMA OPÇÃO: ");
             opcao = int.Parse(Console.ReadLine());
-
 
             switch (opcao)
             {
+                case 11:
+                    ExerciciosP2 objexercicio11 = new ExerciciosP2();
+                    objexercicio11.TrocadeValores();
+                    break;
 
-                case 35:
-                    ExerciciosP3 exerc35 = new ExerciciosP3();
-                    exerc35.Multiplosde10Em100();
+                case 12:
+
+                    ExerciciosP2 objexercicio12 = new ExerciciosP2();
+                    objexercicio12.ModuloNumero();
+
+                    break;
+
+                case 13:
+                    ExerciciosP2 objexercicio13 = new ExerciciosP2();
+                    objexercicio13.NumerosOrdemDecrescente();
+
+                    break;
+                case 14:
+                    ExerciciosP2 objexercicio14 = new ExerciciosP2();
+                    objexercicio14.MaioreMenorNumero();
+
+                    break;
+
+                case 15:
+                    ExerciciosP2 objexercicio15 = new ExerciciosP2();
+                    objexercicio15.AlunoAprovadoReprovado();
+
 
 
                     break;
 
-                case 36:
-                    ExerciciosP3 exerc36 = new ExerciciosP3();
-                    exerc36.MaiorMenorValorNumPositivo();
+                case 16:
+                    ExerciciosP2 objexercicio16 = new ExerciciosP2();
+                    objexercicio16.MaiorMenorouIgual();
                     break;
 
-                case 37:
-                    ExerciciosP3 exerc37 = new ExerciciosP3();
-                    exerc37.QuatroOperacoes();
-                    break;
+                case 17:
 
-                case 38:
-                    ExerciciosP3 exerc38 = new ExerciciosP3();
-                    exerc38.CalculoSalario();
+                    ExerciciosP2 objexercicio17 = new ExerciciosP2();
+                    objexercicio17.DentroOuForadoLimite();
 
                     break;
-                case 39:
-                    ExerciciosP3 exerc39 = new ExerciciosP3();
-                    exerc39.ParImparPositivoNegativo();
+                case 18:
+                    ExerciciosP2 objexercicio18 = new ExerciciosP2();
+                    objexercicio18.CodigoValidoInValido();
+
 
                     break;
-                case 40:
-                    ExerciciosP3 exerc40 = new ExerciciosP3();
-                    exerc40.IndicePoluicao();
-
-                    break;
-                case 41:
-                    ExerciciosP3 exerc41 = new ExerciciosP3();
-                    exerc41.ClassificacaoCategorica();
-                    break;
-                case 42:
-                    ExerciciosP3 exerc42 = new ExerciciosP3();
-                    exerc42.MaiorMenorDeNnumeros();
-                    break;
-                case 43:
-                    ExerciciosP3 exerc43 = new ExerciciosP3();
-                    exerc43.NumeroDeGraosPagamento();
-
-                    break;
-                case 44:
-                    ExerciciosP3 exerc44 = new ExerciciosP3();
-                    exerc44.Escolherentre4Opcoes();
-
-                    break;
-
-                case 45:
-                    ExerciciosP3 exerc45 = new ExerciciosP3();
-                    exerc45.NumerosNaORdeInversa();
-
-                    break;
-                case 46:
-                    ExerciciosP3 exerc46 = new ExerciciosP3();
-                    exerc46.ProdutoEscalarVetores();
+                case 19:
+                    ExerciciosP2 objexercicio19 = new ExerciciosP2();
+                    objexercicio19.LadosDoTriangulo();
 
 
 
                     break;
-                case 47:
-                    ExerciciosP3 exerc47 = new ExerciciosP3();
-                    exerc47.NumerosMaioresMenoresIguaisaX();
 
-                    break;
-                case 48:
-                    ExerciciosP3 exerc48 = new ExerciciosP3();
-                    exerc48.EncontrarModelo();
+                case 20:
 
-                    break;
-                case 49:
-                    ExerciciosP3 exerc49 = new ExerciciosP3();
-                    exerc49.ValoresIguaisNaMesmaPosicao();
-
-
-                    break;
-                case 50:
-                    ExerciciosP3 exerc50 = new ExerciciosP3();
-                    exerc50.AdivinheoNumero();
-
-
-                    break;
-                case 51:
-                    ExerciciosP3 exerc51 = new ExerciciosP3();
-                    exerc51.NotasAcimaDeCinco();
-
-
-                    break;
-                case 52:
-                    ExerciciosP3 exerc52 = new ExerciciosP3();
-                    exerc52.VezesQueNumeroAparece();
-
-
-                    break;
-                case 53:
-                    ExerciciosP3 exerc53 = new ExerciciosP3();
-                    exerc53.CorridaAutomoveis();
-
-
-                    break;
-                case 54:
-                    ExerciciosP3 exerc54 = new ExerciciosP3();
-                    exerc54.ElementosComunsVetores();
-                    break;
-
-                case 55:
-                    ExerciciosP3 exerc55 = new ExerciciosP3();
-                    exerc55.RetirarEspacos();
-
-                    break;
-
-                case 56:
-                    ExerciciosP3 exerc56 = new ExerciciosP3();
-                    exerc56.NumerosParesEmultiplosDe5();
-
-                    break;
-                case 57:
-                    ExerciciosP3 exerc57 = new ExerciciosP3();
-                    exerc57.ImprimirSomenteVogais();
+                    ExerciciosP2 objexercicio20 = new ExerciciosP2();
+                    objexercicio20.numeroValidoOuInvalido();
 
 
                     break;
 
-                case 58:
-                    ExerciciosP3 exerc58 = new ExerciciosP3();
-                    exerc58.MediaeMaiorValor();
+                case 21:
 
-                    break;
-                case 59:
-                    ExerciciosP3 exerc59 = new ExerciciosP3();
-                    exerc59.ContCaracteres();
-
+                    ExerciciosP2 objexercicio21 = new ExerciciosP2();
+                    objexercicio21.VerificarNumero();
                     break;
 
-                case 61:
-                    ExerciciosP3 exerc61 = new ExerciciosP3();
-                    exerc61.CalculoReajuste();
+                case 22:
 
-                    break;
-                case 62:
-                    ExerciciosP3 exerc62 = new ExerciciosP3();
-                    exerc62.CalculoHipotenusa();
-
-
-                    break;
-                case 63:
-                    ExerciciosP3 exerc63 = new ExerciciosP3();
-                    exerc63.VerificarParouImpar();
-
-
+                    ExerciciosP2 objexercicio22 = new ExerciciosP2();
+                    objexercicio22.PositivoNegativo();
                     break;
 
+                case 23:
+
+                    ExerciciosP2 objexercicio23 = new ExerciciosP2();
+                    objexercicio23.QuatroOperacoes();
+                    break;
+                case 24:
+
+                    ExerciciosP2 objexercicio24 = new ExerciciosP2();
+                    objexercicio24.CalculoMultiploParMedia();
+                    break;
+                case 25:
+
+                    ExerciciosP2 objexercicio25 = new ExerciciosP2();
+                    objexercicio25.PesoIdeal();
+                    break;
+                case 26:
+
+                    ExerciciosP2 objexercicio26 = new ExerciciosP2();
+                    objexercicio26.ExibindoNumerosOrdemDecresc();
+                    break;
+                case 27:
+                    ExerciciosP2 objexercicio27 = new ExerciciosP2();
+                    objexercicio27.FatorialDoNumero();
+
+
+                    break;
+                case 28:
+
+                    ExerciciosP2 objexercicio28 = new ExerciciosP2();
+                    objexercicio28.ImparesEntre100e200();
+                    break;
+
+                case 29:
+
+                    ExerciciosP2 objexercicio29 = new ExerciciosP2();
+                    objexercicio29.Numeros1ate200();
+                    break;
+                case 30:
+
+                    ExerciciosP2 objexercicio30 = new ExerciciosP2();
+                    objexercicio30.Tabuada();
+                    break;
+                case 31:
+
+                    ExerciciosP2 objexercicio31 = new ExerciciosP2();
+                    objexercicio31.ParesImpares();
+                    break;
+                case 32:
+
+                    ExerciciosP2 objexercicio32 = new ExerciciosP2();
+                    objexercicio32.SomaDosQuadrados();
+                    break;
+                case 33:
+
+                    ExerciciosP2 objexercicio33 = new ExerciciosP2();
+                    objexercicio33.MediaNotas();
+                    break;
+
+
+
+                case 34:
+
+                    ExerciciosP2 objexercicio34 = new ExerciciosP2();
+                    objexercicio34.MaiorMenorValor();
+                    break;
                 case 0:
-
                     Console.WriteLine("Sair!");
                     break;
 
                 default:
-
                     Console.WriteLine("Opção Invalida!");
+
                     break;
+
+
 
 
 
@@ -230,10 +205,7 @@ class Principal
 
 
             }
+
         } while (opcao!=0);
-
     }
-
-
-
 }
